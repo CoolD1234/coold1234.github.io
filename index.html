@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://www.authpro.com/js/auth.js"></script>
+    <script>
+        var ap=new AuthPro('CoolD1234');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zonikyo</title>
+    <link rel="shortcut icon" type="image/png" href="https://lh3.googleusercontent.com/3FGlcAGHlhvjhQ1892wWPJCxRkeB5bBzDmhgwPkHU_itBsVQwZynq3MUFoUCcQdDz7P84ChSSx2HrODkRgAjTQ=w1280">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #1c1c1c;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            margin-left: 20px; /* Adjust the margin as needed */
+        }
+
+        .logo img {
+            max-height: 40px; /* Adjust the maximum height as needed */
+        }
+        
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .gradient-btn {
+            background-image: linear-gradient(to right, #ff8a00, #e52e71);
+            color: #fff;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 20px;
+            margin: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #1c1c1c;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Login/Signup Popup Styles */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .popup {
+            background-color: #ffffff51;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        /* Page Transitions */
+        .page {
+            display: none;
+            animation: slideIn 0.5s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        /* Animation for gradient text */
+        .gradient-text {
+            background: linear-gradient(to right, #ff8a00, #e52e71);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        /* Container styles */
+        .content-container {
+            margin-bottom: 30px;
+            color: #333; /* Text color */
+        }
+
+        /* Paragraph styles */
+        .content-container p {
+            margin: 0; /* Remove default margin */
+            margin-right: 3px; /* Add some space between paragraphs */
+            color: #333; /* Text color */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <script src="https://www.authpro.com/js/auth.js"></script>
+    <script>
+        var ap=new AuthPro('CoolD1234');
+    </script>
+    <link rel="icon" type="image/png" href="https://lh5.googleusercontent.com/M9qC5fCEAAsLlEDmCel44y-eB9My1y3qW0eyFUZTFaFGIR35A1cyEUx7m-k20BgAkCUN_X62NTfJmse7_wRNog=w1280">
+    <div class="logo">
+        <img src="https://i.ibb.co/GPZkDR1/Copy-of-Zonikyo-1.png" alt="Zonikyo Logo">
+    </div>
+    <div class="menu">
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="authpro:login">Games</a>
+        <a href="https://smp.zonikyo.com">Minecraft Server</a>
+        <a href="#" onclick="showPage('about')">About</a>
+        <a href="authpro:login" class="gradient-btn">Login or Signup</a>
+    </div>
+</header>
+
+<!-- Pages -->
+<div class="page" id="home">
+    <div class="container" style="display: flex; justify-content: center; align-items: center; height: 65vh;">
+        <div style="text-align: center;">
+            <h1 class="gradient-text" style="margin-bottom: 20px;">Welcome to Zonikyo</h1>
+            <br>
+            <a href="https://www.youtube.com/@zonikyo" class="gradient-btn" style="margin-right: 10px;">YouTube</a>
+            <a href="https://www.twitch.tv/zonikyo" class="gradient-btn" style="margin-right: 10px;">Twitch</a>
+            <a href="https://smp.zonikyo.com" class="gradient-btn">Minecraft Server</a>
+            <br>
+            <br>
+            <p class="gradient-text">Enjoy the Refurbished Experience of Zonikyo</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="page" id="games">
+    <div class="container">
+        <!-- Content for games page goes here -->
+        <h1 class="gradient-text" style="margin-bottom: 20px;">Games</h1>
+        <br>
+        <p class="gradient-text" style="margin-bottom: 20px;">Welcome to the World of Games! These are some of Zonikyo's Favorites, which you can play right in your web browser!</p>
+        <br>
+        <p class="gradient-text" style="margin-bottom: 20px;">Please note that the Games are a work in Progress and may come in a Future update.</p>
+    </div>
+</div>
+
+
+<div class="page" id="about">
+    <div class="container">
+        <!-- Page content goes here -->
+        <h1 class="gradient-text" style="margin-bottom: 20px;">About Zonikyo</h1>
+        <br>
+        <p class="gradient-text" style="margin-bottom: 20px;">Zonikyo is an Australian Teenager who loves playing Minecraft and stretching the limits when it comes to Computers</p>
+        <p class="gradient-text" style="margin-bottom: 20px;">In the past, Zonikyo has created mutliple games using the Scratch programming website, which uses block-based code to create pretty much anything.</p>
+        <p class="gradient-text" style="margin-bottom: 20px;">Posting these games to his Website, www.codedfun.net, he found a great fan base who loved his ideas. A fan base of Zero people.</p>
+        <p class="gradient-text" style="margin-bottom: 20px;">So in 2022, Zonikyo created a YouTube channel "CoolD1234" and started creating Gaming content, Be like videos and other things which he enjoyed.</p>
+        <p class="gradient-text" style="margin-bottom: 20px;">Zonikyo would post occasionally, throughout 2022 and 2023, but towards the Middle of 2023, there was a new thing he found fun. Livestreaming.</p>
+        <p class="gradient-text" style="margin-bottom: 20px;">Ever since, Zonikyo has been livestreaming on Twitch and YouTube, creating new websites that people enjoy... and failing at school... (but we won't talk about that one ok)</p>
+    </div>
+</div>
+
+
+<div class="page" id="terms-and-conditions">
+    <div class="container">
+        <!-- Page content goes here -->
+        <h1>Terms and Conditions</h1>
+        <br>
+        <p><b>Disobeying these Conditions could result in a lifetime ban from the website and services owned/maintained by Zonikyo</b></p>
+        <p>**TERMS AND CONDITIONS**
+
+            **OVERVIEW**
+            
+            This website is operated and maintained by Zonikyo. Throughout this website, the terms "we," "us," "I," and "the admin team" all refer to Zonikyo. Zonikyo offers this website for any person who wishes to use it while complying with the Terms of Service. Zonikyo allows you (the user) to use this website as long as you read carefully and follow all the Terms, Conditions, Policies, and Notices stated here.
+            
+            By visiting our site and/or signing up and/or using a Zonikyo Account, you engage in our "Service," meaning that you fully comply with our Terms and Conditions ("Terms of Service", "Terms"). You also agree to any Terms and Conditions ("Terms of Service", "Terms") of any Third Party related to this website, such as Hyperlinks, Logos, and Services. These Terms and Conditions apply to ALL users of the website with no exception.
+            
+            Please read our Terms of Service carefully before accessing or using our website. By accessing or using our website, you agree to be fully bound by these Terms of Service. If you do not agree to all the Terms and Conditions of this agreement, you cannot access or use any part of the website.
+            
+            Any new features that are added to this website are also automatically part of our "Service"; therefore, you must comply with the Terms of Service while using them. This applies similarly to any other website or service under the Zonikyo branches. We reserve the right to update, add, or remove any part of these Terms of Service without warning or notification; it is your responsibility to periodically check and carefully read over these Terms of Service. Your continued use of this website is automatic acceptance of whatever changes we have made to the Terms of Service.
+            
+            Our website is hosted with Google Sites Web Hosting. They provide us with servers to host the website, store the website, and servers for our and your protection while you access the website.
+            
+            **SECTION 1 - USAGE OF SPECIFIC SERVICES TERMS**
+            
+            By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site. You may not use our services for any illegal or unauthorized purpose nor may you, in the use of the Service, violate any laws in your jurisdiction (including but not limited to copyright laws). You must not transmit any worms or viruses or any code of a destructive nature. A breach or violation of any of the Terms will result in an immediate termination of your Services.
+            
+            **SECTION 2 - GENERAL CONDITIONS**
+            
+            We reserve the right to refuse service to anyone for any reason at any time. You understand that your content may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks, although credit card information should never be inputted into any part of this website, nor does the website have any place for credit card information to be inputted, therefore we are not liable for any losses or transmissions of credit card data. You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us. The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.
+            
+            **SECTION 3 - IF WE DISCONTINUE THE SERVICE**
+            
+            We reserve the right to discontinue, pause, or move the service at ANY TIME. We are not responsible for any Third Parties discontinuing, pausing, or moving their services.
+            
+            **SECTION 4 - THIRD PARTY EXTERNAL LINKS**
+            
+            Certain content, products, and services available via our Service may include materials from third parties. Third-party links on this site may direct you to third-party websites that are not affiliated with us. We are not responsible for examining or evaluating the content or accuracy and we do not warrant and will not have any liability or responsibility for any third-party materials or websites, or for any other materials, products, or services of third parties. We are not liable for any harm or damages related to the purchase or use of goods, services, resources, content, or any other transactions made in connection with any third-party websites. Please review carefully the third party's policies and practices and make sure you understand them before you engage in any transaction. Complaints, claims, concerns, or questions regarding third-party products should be directed to the third party.
+            
+            **SECTION 5 - SUBMISSION OF PRIVATE OR PERSONAL INFORMATION**
+            
+            Your submission of Personal information is governed by our Privacy Policy.
+            
+            **SECTION 6 - PROHIBITED USES**
+            
+            In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial, or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Service or of any related website, other websites, or the Internet; (h) to collect or track the personal information of others; (i) to spam, phish, pharm, pretext, spider, crawl, or scrape; (j) for any obscene or immoral purpose; or (k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating any of the prohibited uses.
+            
+            **SECTION 7 - SUPPORT**
+            
+            We hold the right to ignore, use, and publicly share any questions that you ask via email, discord, or any other platform that may be connected to this website for "support" purposes. By contacting "support," you agree that your question, statement, or feedback may be ignored, used, and/or shared publicly. If you wish to contact us about any questions related to the Terms of Service, you can email us at help@codedfun.net.
+            
+            **SECTION 8 - PRIVACY POLICY**
+            
+            By using this website, you are bound by our Privacy Notice/Privacy Policy.</p>
+    </div>
+</div>
+
+
+<div class="page" id="games-auth-verified">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="resources">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="behind-the-screens">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="authpro-credit">
+    <div class="container">
+        <!-- Page content goes here -->
+        <p class="gradient-text">Authpro hosts the Sign in services on the Zonikyo Network. This makes it incedibly secure and easy to manage everyone's information.</p>
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<div class="page" id="page_name">
+    <div class="container">
+        <!-- Page content goes here -->
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="https://sites.google.com/view/zonikyolegal/terms-and-conditions">Terms and Conditions</a>
+            <a href="https://www.example.com">Privacy Policy</a>
+            <a href="https://www.example.com">Support</a>
+            <a href="#" onclick="showPage('authpro-credit')">AuthPro</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Function to open login/signup popup
+    function openPopup() {
+        document.getElementById('popup-container').style.display = 'flex';
+    }
+
+    // Function to close login/signup popup
+    function closePopup() {
+        document.getElementById('popup-container').style.display = 'none';
+    }
+
+    // Function to toggle between login and signup forms
+    function toggleForm() {
+        var loginContainer = document.getElementById('login-container');
+        var signupContainer = document.getElementById('signup-container');
+
+        if (loginContainer.style.display === 'none') {
+            loginContainer.style.display = 'block';
+            signupContainer.style.display = 'none';
+        } else {
+            loginContainer.style.display = 'none';
+            signupContainer.style.display = 'block';
+        }
+    }
+
+    // Function to show page and handle page transitions
+    function showPage(pageId) {
+        var pages = document.getElementsByClassName('page');
+        for (var i = 0; i < pages.length; i++) {
+            pages[i].style.display = 'none';
+        }
+        document.getElementById(pageId).style.display = 'block';
+    }
+
+    // Show home page by default
+    showPage('home');
+</script>
+
+</body>
+</html>
+
