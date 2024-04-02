@@ -81,6 +81,24 @@
             width: 100%;
         }
 
+        /* Style your iframe container here */
+        .iframe-container {
+        position: relative;
+        margin: 10px auto;
+        width: 600px; /* Adjust width as needed */
+        height: 400px; /* Adjust height as needed */
+         }
+    
+        /* Style the fullscreen button */
+        .fullscreen-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        }
+
         .footer-links {
             margin-top: 10px;
         }
@@ -94,6 +112,48 @@
         .footer-links a:hover {
             text-decoration: underline;
         }
+
+        .image-button {
+            /* Dimensions and Positioning */
+            width: 410px; /* Adjust width for desired size */
+            height: 250px; /* Adjust height for desired size */
+            display: inline-block;
+            margin: 5px; /* Add spacing between buttons (optional) */
+
+            /* Image Display */
+            overflow: hidden;
+            background-image: url("image.jpg"); /* Set image as background */
+            background-size: cover;  /* Fit image and crop if necessary */
+            background-repeat: no-repeat; /* Prevent image tiling */
+            background-position: center; /* Center the image within the button */
+
+            /* Button Appearance (optional) */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Add rounded corners (optional) */
+            cursor: pointer; /* Change cursor to indicate interactivity */
+
+            /* Hover Effect (optional) */
+            transition: transform 0.2s ease-in-out; /* Set transition properties (optional) */
+            scroll-snap-align: start; /* Snap buttons to the left edge */
+
+            /* Bounce animation (optional) */
+            /* ... Include animation code from previous examples ... */
+        }
+        
+
+
+        .image-button:hover {
+            transform: scale(1.05);  /* Increase size on hover (adjust for scale) */
+            /* Add a slight bounce effect */
+            animation: bounce 2s ease-in-out infinite alternate;
+        }
+
+        /* Bounce animation definition */
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+            100% { transform: translateY(0); }
+        }   
 
         /* Login/Signup Popup Styles */
         .popup-container {
@@ -118,11 +178,32 @@
             position: relative;
         }
 
+        .image-slider::-webkit-scrollbar {
+            width: 10px; /* Adjust scrollbar width */
+            height: 10px; /* Adjust scrollbar height */
+            background-color: #333; /* Scrollbar background color */
+        }           
+
+        .image-slider::-webkit-scrollbar-thumb {
+            background-color: #666; /* Scrollbar thumb color */
+            border-radius: 5px; /* Rounded corners for the thumb */
+        }   
+
         .close-btn {
             position: absolute;
             top: 10px;
             right: 10px;
             cursor: pointer;
+        }
+
+        .image-slider {
+            width: 100%; /* Set the slider width */
+            overflow-x: scroll; /* Enable horizontal scrolling */
+            white-space: nowrap; /* Prevent wrapping of buttons */
+            scroll-snap-type: x mandatory; /* Enable snapping to buttons */
+            background-color: #1c1c1c; /* Add a subtle background color */
+            border-radius: 5px; /* Add rounded corners for the slider container */
+            padding: 10px;
         }
 
         /* Page Transitions */
@@ -181,13 +262,23 @@
 <main>
     <div class="container">
         <h1 class="gradient-text">Games</h1>
-        <p style="color:#ff0000">This feature is currently still under Development and will be introduced in FULL in a future update. Please be patient as programing takes time.</p>
+        <br>
+        <p style="color: #ff0000">There are going to be more improvments to this page as time progresses.</p>
+        <br>
+        <h2 class="gradient-text">All games</h2>
+        <div class="image-slider">
+            <a href="https://www.zonikyo.com/smashkarts.html" class="image-button">
+                <img src="https://i.ibb.co/z7BDML5/1.png" alt="Smashkarts">
+            </a>
+            <a href="https://www.zonikyo.com/shellshockers.html" class="image-button">
+                <img src="https://i.ibb.co/CQrdzQc/2.png" alt="Shellshockers">
+            </a>
+            <a href="https://www.zonikyo.com/slope.html" class="image-button">
+                <img src="https://i.ibb.co/pQW4gLT/3.png" alt="Slope">
+            </a>
+        </div>
     </div>
 </main>
-
-<footer>
-    <!-- Footer content (e.g., footer links, copyright) -->
-</footer>
 
 <!-- Add any additional script tags or JavaScript code here -->
 </body>
