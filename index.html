@@ -408,6 +408,29 @@
             margin-right: 3px; /* Add some space between paragraphs */
             color: #333; /* Text color */
         }
+
+        .image-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px; /* Adjust gap for spacing between images */
+        }
+        
+        .image-container img {
+          width: 200px; /* Adjust width for your desired size */
+          height: 112px; /* Maintains 16:9 ratio */
+          border-radius: 5px;
+          transition: transform 0.2s ease-in-out; /* Animation for hover effect */
+        }
+        
+        .image-container img:hover {
+          transform: translateY(-5px); /* Raises image on hover */
+          opacity: 0.8; /* Slight transparency on hover (optional) */
+        }
+        
+        .image-container img[title] {
+          cursor: pointer; /* Shows pointer cursor on images with title */
+        }
+
     </style>
 </head>
 <body>
@@ -435,7 +458,7 @@
 <div class="page" id="home">
     <div class="container" style="display: flex; justify-content: center; align-items: center; height: 65vh;">
         <div class="card-swiper">
-              <div class="card-groups">
+            <div class="card-groups">
                 <div class="card-group" data-index="0" data-status="active">
                   <div class="little-card card">
                   </div>
@@ -458,62 +481,14 @@
             
                   </div>
                   <div class="big-card card">
-            
-                  </div>
                 </div>
-                <div class="card-group" data-index="1" data-status="unknown">
-                  <div class="little-card card">
-            
-                  </div>
-                  <div class="big-card card">
-            
-                  </div>
-                  <div class="little-card card">
-            
-                  </div>
-                  <div class="big-card card">
-            
-                  </div>
-                  <div class="little-card card">
-            
-                  </div>
-                  <div class="big-card card">
-            
-                  </div>
-                  <div class="little-card card">
-            
-                  </div>
-                  <div class="big-card card">
-            
-                  </div>
-                </div>
-                <div class="card-group" data-index="2" data-status="unknown">
-                  <div class="little-card card">
-            
-                  </div>
-                  <div class="big-card card">
-            
-                  </div>
-                  <div class="little-card card">
-            
-                  </div>
-                  <div class="big-card card">
-            
-                  </div>
-                  <div class="little-card card">
-            
-                  </div>
-                  <div class="big-card card">
-            
-                  </div>
-                  <div class="little-card card">
-            
-                  </div>
-                  <div class="big-card card">
-            
-                  </div>
-                </div>
-              </div>
+            </div>  
+        </div>
+    <div class="image-container">
+  <img src="https://images.crazygames.com/shellshockersio_16x9/20240105032649/shellshockersio_16x9-cover?auto=format,compress&q=75&cs=strip" alt="Image shellshcok1 Title" title="ShellShcokers is in BETA">
+  <img src="https://images.crazygames.com/shellshockersio_16x9/20240105032649/shellshockersio_16x9-cover?auto=format,compress&q=75&cs=strip" alt="Image shellshock2 Title" title="Shellshockers is FUN">
+  </div>
+
     </div>
 </div>
 
