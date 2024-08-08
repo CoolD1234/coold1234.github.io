@@ -59,20 +59,24 @@
             text-decoration: none;
         }
 
-        /* Container Styles */
+        /* Main Container Styles */
         .container {
-            display: flex;
             padding: 100px 20px 20px; /* Adjusted padding to account for fixed header */
+            display: flex;
+        }
+
+        /* Content Section Styles */
+        .content {
+            flex: 2;
+            margin-right: 20px;
         }
 
         /* Game Frame Container Styles */
         .game-frame-container {
             position: relative;
-            flex: 2;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-right: 20px;
         }
 
         .iframe-container {
@@ -129,7 +133,7 @@
 
         /* Game Details Styles */
         .game-details-container {
-            margin-top: 10px;
+            margin-top: 20px;
             padding: 20px;
             background: white;
             border-radius: 10px;
@@ -265,20 +269,22 @@
 
     <!-- Main Content -->
     <div class="container">
-        <div class="game-frame-container">
-            <div class="loading-animation" id="loadingAnimation">Loading...</div>
-            <div class="iframe-container">
-                <button class="fullscreen-button" onclick="toggleFullScreen()">
-                    <img src="https://img.icons8.com/ios-filled/50/ffffff/full-screen.png" alt="Fullscreen">
-                </button>
-                <iframe id="gameFrame" src="https://example.com"></iframe>
+        <div class="content">
+            <div class="game-frame-container">
+                <div class="loading-animation" id="loadingAnimation">Loading...</div>
+                <div class="iframe-container">
+                    <button class="fullscreen-button" onclick="toggleFullScreen()">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/full-screen.png" alt="Fullscreen">
+                    </button>
+                    <iframe id="gameFrame" src="https://example.com"></iframe>
+                </div>
             </div>
-        </div>
 
-        <!-- Game Title and Description -->
-        <div class="game-details-container">
-            <h1 id="gameTitle">Game Title</h1>
-            <p id="gameDescription">Game Description</p>
+            <!-- Game Title and Description -->
+            <div class="game-details-container">
+                <h1 id="gameTitle">Game Title</h1>
+                <p id="gameDescription">Game Description</p>
+            </div>
         </div>
 
         <!-- Sidebar -->
