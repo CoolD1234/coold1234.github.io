@@ -1,77 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Ultimate Proxy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Proxy</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             background-color: #f0f0f0;
             margin: 0;
-            padding: 20px;
         }
-
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
         h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
             color: #333;
         }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        input[type="text"] {
+        #url-input {
             padding: 10px;
+            width: 80%;
+            margin-bottom: 20px;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 300px;
+            border-radius: 4px;
         }
-
-        button {
+        #go-button {
             padding: 10px 20px;
-            background-color: #4caf50;
+            background-color: #007BFF;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
         }
-
-        #result {
-            margin-top: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
+        #go-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Ultimate Proxy</h1>
-        <form id="proxyForm">
-            <input type="text" id="searchInput" placeholder="Enter URL or search query">
-            <button type="submit">Go</button>
-        </form>
-        <div id="result"></div>
+        <h1>Proxy Gateway</h1>
+        <input type="text" id="url-input" placeholder="Enter URL">
+        <button id="go-button">Go</button>
     </div>
-    <script>
-        const form = document.getElementById('proxyForm');
-        const input = document.getElementById('searchInput');
-        const resultDiv = document.getElementById('result');
 
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
-            const query = input.value;
-            // Replace this with your AJAX call to the backend
-            fetch(`/proxy?query=${encodeURIComponent(query)}`)
-                .then(response => response.text())
-                .then(data => {
-                    resultDiv.textContent = data;
-                })
-                .catch(error => {
-                    resultDiv.textContent = `Error: ${error}`;
-                });
+    <script>
+        document.getElementById('go-button').addEventListener('click', function() {
+            const url = document.getElementById('url-input').value;
+            if (url) {
+                window.location.href = `/proxy?url=${encodeURIComponent(url)}`;
+            }
         });
     </script>
 </body>
