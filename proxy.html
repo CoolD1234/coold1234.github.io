@@ -1,29 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Improved Proxy</title>
+    <title>Ultimate Proxy</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
         }
 
-        .container {
-            margin: 0 auto;
-            width: 80%;
+        h1 {
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>My Powerful Proxy</h1>
-        <form method="post">
-            <input type="text" name="search" placeholder="Search">
+        <h1>Ultimate Proxy</h1>
+        <form id="proxyForm">
+            <input type="text" id="searchInput" placeholder="Enter URL or search query">
             <button type="submit">Go</button>
         </form>
+        <div id="result"></div>
     </div>
     <script>
-        // Your JavaScript code here
+        const form = document.getElementById('proxyForm');
+        const input = document.getElementById('searchInput');
+        const resultDiv = document.getElementById('result');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const query = input.value;
+            // Replace this with your AJAX call to the backend
+            fetch(`/proxy?query=${encodeURIComponent(query)}`)
+                .then(response => response.text())
+                .then(data => {
+                    resultDiv.textContent = data;
+                })
+                .catch(error => {
+                    resultDiv.textContent = `Error: ${error}`;
+                });
+        });
     </script>
 </body>
 </html>
