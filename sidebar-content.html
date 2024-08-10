@@ -1,5 +1,8 @@
 <style>
-    .game-item {
+    /* Ensure all <a> tags look like normal text */
+    a.game-item {
+        text-decoration: none; /* Remove underline */
+        color: inherit; /* Inherit the color from parent elements */
         display: flex;
         align-items: center;
         margin-bottom: 15px;
@@ -8,11 +11,9 @@
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: background-color 0.3s;
-        text-decoration: none; /* Remove underline */
-        color: black; /* Set text color */
     }
 
-    .game-item:hover {
+    a.game-item:hover {
         background-color: #f0f0f0;
     }
 
@@ -34,16 +35,24 @@
         flex: 1;
     }
 
+    /* Ensure text inside game-item is styled correctly */
     .game-title {
         font-size: 16px;
         margin: 0;
-        color: black; /* Set text color */
+        color: black; /* Ensure the text color is black */
     }
 
     .game-description {
         font-size: 14px;
         color: #666;
         margin: 5px 0 0;
+    }
+
+    /* Ensure <a> tags inside the sidebar do not have default link styles */
+    a.game-item .game-title, 
+    a.game-item .game-description {
+        color: inherit; /* Inherit color, to avoid link styles */
+        text-decoration: none; /* Ensure no underline */
     }
 </style>
 
