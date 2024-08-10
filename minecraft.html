@@ -94,6 +94,8 @@
             height: 100%;
             border: none;
             border-radius: 10px;
+            /* Enable keyboard and gamepad input, fullscreen mode */
+            allow: fullscreen; 
         }
 
         .fullscreen-button {
@@ -276,7 +278,7 @@
                     <button class="fullscreen-button" onclick="toggleFullScreen()">
                         <img src="https://img.icons8.com/ios-filled/50/ffffff/full-screen.png" alt="Fullscreen">
                     </button>
-                    <iframe id="gameFrame" src="EaglercraftX_1.8_u35_Offline_Signed.html"></iframe>
+                    <iframe id="gameFrame" src="EaglercraftX_1.8_u35_Offline_Signed.html" allow="fullscreen; keyboard; gamepad;"></iframe>
                 </div>
             </div>
 
