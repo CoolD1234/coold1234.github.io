@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zonikyo | Terms and Conditions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .menu-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: transparent;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .menu-bar.scrolled {
+            background: black;
+        }
+
+        .menu-bar.scrolled a, .menu-bar.scrolled .logo {
+            color: white;
+        }
+
+        .menu-bar a, .menu-bar .logo {
+            color: black;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-bar .login-signup {
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: linear-gradient(45deg, #f06, #f93);
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 120px 20px 20px; /* Adjusted padding to account for fixed header */
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-column a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .footer-row {
+            display: flex;
+        }
+
+        .footer-row .footer-column {
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="menu-bar">
+            <div class="logo">Zonikyo | Gaming</div>
+            <div class="nav-links">
+                <a href="#">&#127968; Home</a>
+                <a href="#">&#128225; Categories</a>
+                <a href="#">&#128293; Trending</a>
+                <a href="authpro:login" class="login-signup">Login or Signup</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="content">
+            <h1>Terms and Conditions</h1>
+            <p>Welcome to Zonikyo. These terms and conditions outline the rules and regulations for the use of Zonikyo's website.</p>
+
+            <h2>1. Terms</h2>
+            <p>By accessing this website, you are agreeing to be bound by these terms and conditions of use, all applicable laws, and regulations, and agree that you are responsible for compliance with any applicable local laws.</p>
+
+            <h2>2. Use License</h2>
+            <p>Permission is granted to temporarily download one copy of the materials (information or software) on Zonikyo's website for personal, non-commercial transitory viewing only.</p>
+
+            <h2>3. Disclaimer</h2>
+            <p>The materials on Zonikyo's website are provided "as is". Zonikyo makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties.</p>
+
+            <h2>4. Limitations</h2>
+            <p>In no event shall Zonikyo or its suppliers be liable for any damages arising out of the use or inability to use the materials on Zonikyo's website.</p>
+
+            <h2>5. Revisions and Errata</h2>
+            <p>The materials appearing on Zonikyo's website could include technical, typographical, or photographic errors. Zonikyo does not warrant that any of the materials on its website are accurate, complete, or current.</p>
+
+            <h2>6. Site Terms of Use Modifications</h2>
+            <p>Zonikyo may revise these terms of use for its website at any time without notice. By using this website you are agreeing to be bound by the then-current version of these terms and conditions of use.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-row">
+            <div class="footer-column">
+                <div class="logo">Zonikyo | Gaming</div>
+                <br>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">About</a>
+            </div>
+            <div class="footer-column">
+                <a href="#">Example 1</a>
+                <a href="#">Example 2</a>
+                <a href="#">Example 3</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
