@@ -209,6 +209,63 @@
             height: 40px;
         }
 
+        /* Modal Container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Close Button */
+.close-button {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Modal Title and Message */
+#popupTitle {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#popupMessage {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Modal Button */
+.modal-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #f06, #f93);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
         /* Footer Styles */
         footer {
             background: black;
@@ -247,6 +304,16 @@
             </div>
         </div>
     </header>
+
+    <!-- Popup Modal -->
+<div id="popupModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closePopup()">&times;</span>
+        <h2 id="popupTitle">Welcome to Zonikyo!</h2>
+        <p id="popupMessage">This website is in beta and is nowhere near complete.</p>
+        <button onclick="closePopup()" class="modal-button">Try out the BETA features</button>
+    </div>
+</div>
 
     <!-- Main Content -->
     <div class="container">
@@ -401,6 +468,21 @@
     </footer>
 
     <script>
+        // Function to open the popup
+function openPopup() {
+    document.getElementById('popupModal').style.display = 'flex';
+}
+
+// Function to close the popup
+function closePopup() {
+    document.getElementById('popupModal').style.display = 'none';
+}
+
+// Automatically open the popup after 2 seconds (optional)
+window.onload = function() {
+    setTimeout(openPopup, 2000); // Adjust the delay as needed
+}
+
         // Change menu bar background and text color on scroll
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
